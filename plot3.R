@@ -1,0 +1,5 @@
+with(dataset, plot(Sub_metering_1~dateTime, type="l", xlab="", ylab="Global Active Power (kilowatts)"))
+lines(dataset$Sub_metering_2~dataset$dateTime, col="red")
+lines(dataset$Sub_metering_3~dataset$dateTime, col="blue")
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty="solid",  col=c("black", "red", "blue"))
+dev.copy(png, file="plot3.png")
